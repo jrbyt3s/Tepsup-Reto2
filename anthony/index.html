@@ -5,7 +5,9 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>Movies, Lo mejor del cine y entretenimiento</title>
+   <link rel="stylesheet" href="css/index.css">
    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
@@ -30,7 +32,7 @@
                      <a href="#" class="font-semibold transition-colors hover:text-sky-500">Series</a>
                   </li>
                   <li>
-                     <a href="#" class="font-semibold transition-colors hover:text-sky-500">Animes</a>
+                     <a href="#contact" class="font-semibold transition-colors hover:text-sky-500">Informes</a>
                   </li>
                </ul>
             </div>
@@ -56,39 +58,25 @@
                         d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                   </svg>
                </a>
-               <button class="btnLogin-popup width: 130px
-               height: 50px
-               background: transparent
-               border: 2px solid #fff
-               outline: none
-               border-radius: 6px
-               cursor: pointer
-               font-size: 1.1em
-               color: #fff
-               font-weight: 500
-               margin-left: 40px hover:background #fff" >Login</button>
             </div>
          </div>
       </nav>
    </header>
-   
-  
+
+
    <main>
-      
+
       <article class="relative min-h-screen flex" id="hero">
          <img src="https://images7.alphacoders.com/674/674296.jpg" alt="Movies"
             class="absolute -z-10 top-0 left-0 w-full h-full object-cover opacity-50" />
          <div class="container px-4 mx-auto flex items-center ">
             <div class="flex flex-col gap-2 max-w-lg">
-               <h1 class="text-5xl font-black">Spirit: Un Corcel Indomable</h1>
-               <h2 class="text-3xl font-bold">La libertad en sus Patas</h2>
+               <h1 class="text-5xl font-black">Gladiador</h1>
                <p>
-                  Spirit: El Corcel Indomable" es una película de animación sobre Spirit, un caballo mustang salvaje en
-                  el
-                  Viejo Oeste de EE. UU. Lucha por su libertad, se une a Little Creek, un nativo americano, y enfrenta a
-                  colonos que lo quieren. La película explora temas de libertad y resistencia en el siglo XIX en el
-                  Oeste
-                  Americano.
+                  <h2 class="text-3xl font-bold">Desafió al Imperio</h2>
+                  Máximo, general romano, desea volver a casa, pero el emperador Marco Aurelio quiere que herede el
+                  imperio. Esto hace que Cómodo ordene matar a su familia. Máximo escapa de la muerte y regresa a Roma
+                  como gladiador para vengar la muerte de su familia.
                </p>
                <div>
                   <span
@@ -101,11 +89,11 @@
                   </span>
                   <span
                      class="bg-pink-100 text-pink-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-pink-900 dark:text-pink-300">
-                     2002
+                     2000
                   </span>
                   <span
                      class="bg-gray-100 text-gray-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-700 dark:text-gray-300">
-                     TMDB ⭐ 4.2
+                     TMDB ⭐ 4.7
                   </span>
                </div>
                <div class="flex">
@@ -137,6 +125,7 @@
                   <div class="hidden duration-700 ease-in-out" data-carousel-item>
                      <img src="https://image.tmdb.org/t/p/original/b8hPBW0NJmiIVzvQjT3CwIpAdzl.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                        
                   </div>
                   <div class="hidden duration-700 ease-in-out" data-carousel-item>
                      <img
@@ -146,6 +135,7 @@
                   <div class="hidden duration-700 ease-in-out" data-carousel-item>
                      <img src="https://images7.alphacoders.com/674/674296.jpg"
                         class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                     
                   </div>
                   <div class="hidden duration-700 ease-in-out" data-carousel-item>
                      <img src="https://images5.alphacoders.com/626/626129.jpg"
@@ -196,6 +186,17 @@
                </button>
             </div>
          </div>
+      </section>
+      <section class="contact" id="contact">
+         <h2 class="heading text-center">Contactanos</h2>
+         <form action="#">
+            <div class="input-box">
+               <input type="text" placeholder="Nombre Completo">
+               <input type="email" placeholder="Correo Electronico">
+            </div>
+            <textarea name="" id="" cols="20" rows="5" placeholder="Comentario"></textarea>
+            <input type="submit" value="Send Message" class="btn">
+         </form>
       </section>
    </main>
 
