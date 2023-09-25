@@ -1,11 +1,531 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animes</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 </head>
-<body>
-    
+
+<body class="bg-body">
+
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand" href="#carouselExampleAutoplaying">Animes</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#latest">Ultimos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#top">Top</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#categories" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Categorias
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#Shounen">Shomen</a></li>
+                                <li><a class="dropdown-item" href="#Shoujo">Shoujo</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#Seinen">Seinen</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--Container de opacidad-->
+        <div class="z-1 position-absolute p-5  rounded-3 bg-black bg-opacity-75 container-fluid vh-100 "></div>
+        <!--Carousel-->
+        <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/anime-lede-1536x864.jpg" class="d-block w-100"
+                        alt="Fullmetal Alchemist Edward Alphonse "
+                        style="display: block; height: 100vh; object-fit: cover;" />
+                    <div class="carousel-caption d-none d-md-block text-white z-2">
+                        <h4>Animes Peru</h4>
+                        <p>Some representative placeholder content for the first slide.</p>
+                        <div>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.alphacoders.com/465/thumb-1920-465254.jpg" class="d-block w-100"
+                        alt="Dragon Ball Gohan" style="display: block; height: 100vh; object-fit: cover;" />
+                    <div class="carousel-caption d-none d-md-block text-white z-2">
+                        <h4>Dragom Ball</h4>
+                        <p>Some representative placeholder content for the second slide.</p>
+                        <div>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images2.alphacoders.com/516/516664.jpg" class="d-block w-100"
+                        alt="One Piece Sabo Luffy Ace" style="display: block; height: 100vh; object-fit: cover;" />
+                    <div class="carousel-caption d-none d-md-block text-white z-2">
+                        <h4>One Piece Sabo Luffy Ace</h4>
+                        <p>Some representative placeholder content for the third slide.</p>
+                        <div>
+                            <button type="button" class="btn btn-primary">Primary</button>
+                            <button type="button" class="btn btn-secondary">Secondary</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </section>
+
+        <section class="py-5" id="latest">
+            <div class="container d-flex flex-column gap-4">
+                <h2 class="text-center">Lo último del anime</h2>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="https://larepublica.cronosmedia.glr.pe/original/2022/06/11/62a51f0decde1c484c2fab1f.jpg"
+                                alt="Dragon Ball Super" width="455" height="256"
+                                class="card-img-top d-block object-fit-cover" style="width: 100%; height: 256px;" />
+                            <!-- <div class="card-body d-flex flex-column" style="height: 200px;"> -->
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This
+                                    content is a little bit longer.
+                                </p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="https://i.blogs.es/0ab52d/boruto/1366_2000.jpeg" alt="Boruto" width="100%"
+                                height="256" class="d-block card-img-top object-fit-cover"
+                                style="width: 100%; height: 256px;" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This
+                                    content is a little bit longer.
+                                </p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="https://libertaddigitalstorage.blob.core.windows.net/radiolibertad-filecontainer/854_480_xuai1ctoshm.jpg"
+                                alt="Kimetsu No Yaiba" width="455" height="256"
+                                class="d-block card-img-top object-fit-cover" style="width: 100%; height: 256px;" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This
+                                    content is a little bit longer.
+                                </p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="https://www.tebeosfera.com/T3content/img/T3_muestras/T3_numeros/f/7/m_spy_x_family_2020_ivrea_2_-clon-_713f7.jpg"
+                                alt="Spy Family" width="455" height="256" class="d-block card-img-top object-fit-cover"
+                                style="width: 100%; height: 256px;" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This
+                                    content is a little bit longer.
+                                </p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="https://pbs.twimg.com/media/FW2IckNWAAUJFgE.jpg" alt="Chainsaw Man" width="455"
+                                height="256" class="d-block card-img-top object-fit-cover"
+                                style="width: 100%; height: 256px;" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This
+                                    content is a little bit longer.
+                                </p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="https://i0.wp.com/modogeeks.com/wp-content/uploads/2016/05/one_piece_burning_blood.jpg?fit=854%2C480&ssl=1"
+                                alt="One Piece" width="455" height="256" class="d-block card-img-top object-fit-cover"
+                                style="width: 100%; height: 256px;" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to
+                                    additional This is a wider card with supporting text below as a natural lead-in to
+                                    additional
+                                    content. This content is a little bit longer.</p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm h-100">
+                            <img src="https://i.blogs.es/ce088c/bleach/1366_2000.png" alt="Bleach" width="455"
+                                height="256" class="d-block card-img-top object-fit-cover"
+                                style="width: 100%; height: 256px;" />
+                            <div class="card-body d-flex flex-column">
+                                <p class="card-text">
+                                    This is a wider card with supporting text below as a natural lead-in to additional
+                                    content. This
+                                    content is a little bit longer.
+                                </p>
+                                <div class="mt-auto d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    </div>
+                                    <small class="text-body-secondary">9 mins</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-5 bg-body-secondary" id="top">
+            <div class="container d-flex flex-column gap-4 ">
+                <!--Titulo de la sección-->
+                <h2 class="text-center ">Top Animes</h2>
+                <!--Tarjeta-->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <div class="row d-flex align-items-center shadow-sm ">
+                        <!--Tarjeta description-->
+                        <div class="col-md-8 d-flex flex-column justify-content-center">
+                            <h3>Fullmetal Alchemist</h3>
+                            <p>
+                                Los hermanos Edward y Alphonse se valen de la alquimia para revivir a su mamá, pero
+                                desatan una
+                                devastadora reacción química que mutila sus cuerpos.
+                            </p>
+                        </div>
+                        <!--Tarjeta imagen-->
+                        <div class="col-md-4">
+                            <div class="col-md-8 d-flex flex-column justify-content-center ">
+                                <img src="https://images6.alphacoders.com/799/thumb-1920-799054.jpg" width="455"
+                                    height="255" alt="Full metal Alchemist"
+                                    class="img-fluid object-fit-cover border rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta-->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <div class="row flex-md-row-reverse align-items-center shadow-sm ">
+                        <!--Tarjeta description-->
+                        <div class="col-md-8 d-flex flex-column justify-content-center">
+                            <h3>Demon Slayer</h3>
+                            <p>
+                                Si hablamos de fenómenos actuales, 'Demon Slayer' está a la cabeza. Basada en el manga
+                                de Koyoharu Gotōge y convertida en una de las series de anime más aclamadas del momento,
+                                la historia sigue a Tanjirou Kamado, un chico inteligente y de buen corazón que mantiene
+                                a su familia vendiendo carbón, pero todo cambia cuando sus seres queridos son asesinados
+                                por un demonio. Con su hermana Nezuko, la única superviviente pero trágicamente
+                                convertida en demonio, el joven se convertirá en un asesino de demonios que no
+                                descansará hasta encontrar la cura para salvar a su hermana.
+                            </p>
+                        </div>
+                        <!--Tarjeta imagen-->
+                        <div class="col-md-4">
+                            <div class="col-md-8 d-flex flex-column justify-content-center ">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/demon-slayer-1643910214.jpg"
+                                    width="455" height="255" alt="Full metal Alchemist"
+                                    class="img-fluid object-fit-cover border rounded">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Tarjeta-->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <div class="row d-flex align-items-center shadow-sm ">
+                        <!--Tarjeta description-->
+                        <div class="col-md-8 d-flex flex-column justify-content-center">
+                            <h3>My Hero Academia</h3>
+                            <p>
+                                'My Hero Academia' cuenta la historia de Izuku Midoriya, un joven que vive en un mundo
+                                donde más de la mitad de la población ha desarrollado superpoderes, surgiendo así héroes
+                                y villanos, pero sus sueños quedarán aplastados cuando se dé cuenta de quél no ha
+                                desarrollado ningún poder. Es normal. Su mayor sueño era convertirse en un héroe como su
+                                ídolo 'All Might', y las cosas de la vida le ponen en el camino de este héroe, quien le
+                                escogerá como su heredero y le transferirá sus poderes. Ahora bien, ¿podrá Midoriya
+                                estar a la altura de las circunstancias?
+                            </p>
+                        </div>
+                        <!--Tarjeta imagen-->
+                        <div class="col-md-4">
+                            <div class="col-md-8 d-flex flex-column justify-content-center ">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/my-hero-academia-1584454230.jpg"
+                                    width="455" height="255" alt="Full metal Alchemist"
+                                    class="img-fluid object-fit-cover border rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta-->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <div class="row flex-md-row-reverse align-items-center shadow-sm ">
+                        <!--Tarjeta description-->
+                        <div class="col-md-8 d-flex flex-column justify-content-center">
+                            <h3>Ataque de los titanes (Shingeki No Kyojin)</h3>
+                            <p>
+                                es una serie basada en el manga del mismo nombre dirigida por Tetsuro Araki,
+                                protagonizada por un grupo de residentes de una ciudad rodeada de murallas, para
+                                proteger a la población de los ataques de gigantes caníbales, quienes de vez en cuando
+                                consiguen entrar en el lugar. La serie ha sido todo un fenómeno de público tras su
+                                adaptación televisiva y sigue adelante empujando los límites de su propio mundo de
+                                fantasía y terror.
+                            </p>
+                        </div>
+                        <!--Tarjeta imagen-->
+                        <div class="col-md-4">
+                            <div class="col-md-8 d-flex flex-column justify-content-center ">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/ataque-de-los-titanes-1584454229.jpeg"
+                                    width="455" height="255" alt="Full metal Alchemist"
+                                    class="img-fluid object-fit-cover border rounded">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Tarjeta-->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <div class="row d-flex align-items-center shadow-sm ">
+                        <!--Tarjeta description-->
+                        <div class="col-md-8 d-flex flex-column justify-content-center">
+                            <h3>Jujutsu Kaisen</h3>
+                            <p>
+                                El anime del momento, basado también en el manga número uno, esta animado por Mappa, el
+                                estudio detrás de 'Chainsaw Man' o 'Ataque a los titanes'. Todo un fenómeno que creció
+                                con su película precuela 'Jujutsu 0', para narrar la historia de unos jóvenes
+                                cazademonios contra criaturas infernales. Imaginación a raudales, personajes y poderes
+                                con carisma, toques de puro terror.
+                            </p>
+                        </div>
+                        <!--Tarjeta imagen-->
+                        <div class="col-md-4">
+                            <div class="col-md-8 d-flex flex-column justify-content-center ">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/jujutsu-kaisen-1667648857.jpg"
+                                    width="455" height="255" alt="Full metal Alchemist"
+                                    class="img-fluid object-fit-cover border rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Tarjeta-->
+                <div class="d-flex flex-column gap-3 mb-4">
+                    <div class="row flex-md-row-reverse align-items-center shadow-sm ">
+                        <!--Tarjeta description-->
+                        <div class="col-md-8 d-flex flex-column justify-content-center">
+                            <h3>One Piece</h3>
+                            <p>
+                                Junto con Dragon Ball y Naruto, One Piece forma la santa trinidad del shonnen. Sin
+                                embargo, al contrario que las otras dos, las aventuras de Monkey D. Luffy, el hombre de
+                                goma, por convertirse en el rey de los piratas, continúan sin pausa más de dos décadas y
+                                más de mil capítulos después. Y lo asombroso es que lo ha hecho sin decaer.
+                            </p>
+                        </div>
+                        <!--Tarjeta imagen-->
+                        <div class="col-md-4">
+                            <div class="col-md-8 d-flex flex-column justify-content-center ">
+                                <img src="https://hips.hearstapps.com/hmg-prod/images/one-piece-top-mangas-mas-vendidos-1543851031.jpg"
+                                    width="455" height="255" alt="Full metal Alchemist"
+                                    class="img-fluid object-fit-cover border rounded">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+        <!--Categorias-->
+        <section class="py-5" id="categories">
+            <!--Por defecto el flex esta en fila-->
+            <div class="container d-flex flex-column gap-4">
+                <h2 class="text-center ">Categorías</h2>
+                <!--Tarjeta Categorias-->
+                <div class="row row-cols-1 row-cols-md-2 g-3">
+                    <!--Tarjeta 1-->
+                    <div class="card text-bg-dark" id="Shounen">
+                        <img src="https://cdn.superaficionados.com/imagenes/dragon-ball-0.jpg"
+                            class="card-img opacity-50 " alt="Shounen">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Shounen</h4>
+                            <p class="card-text">Significa "niño" en traducción literal del japonés. Este tipo de anime
+                                está
+                                dirigido a un público masculino joven (principalmente adolescentes), entre 12 y 18 años.
+                                Es
+                                considerada la clasificación de anime y manga más popular.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <!--Tarjeta 2 -->
+                    <div class="card text-bg-dark" id="Shoujo">
+                        <img src="https://cdn.superaficionados.com/imagenes/sakura-card-captors-0.jpg"
+                            class="card-img opacity-50 " alt="Shoujo">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Shoujo</h4>
+                            <p class="card-text">Significa "niña" en su traducción más literal. El anime shoujo también
+                                está
+                                dirigido a jóvenes, pero principalmente a mujeres. La trama de la serie generalmente
+                                presenta a una niña como protagonista, siendo las historias más centradas en dramas,
+                                romances y otros eventos que marcan el desarrollo de la mujer.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                    <!--Tarjeta 3-->
+                    <div class="card text-bg-dark" id="Seinen">
+                        <img src="https://cdn.superaficionados.com/imagenes/berserk-0.jpg" class="card-img opacity-50 "
+                            alt="Seinen">
+                        <div class="card-img-overlay">
+                            <h4 class="card-title">Seinen</h4>
+                            <p class="card-text">Significa "adulto" u "hombre adulto". Como su nombre lo indica, estos
+                                animes están hechos para un público más maduro, generalmente entre 18 y 40 años. Los
+                                seinen
+                                están destinados a hombres y contienen temas complejos que no serían apropiados para las
+                                personas más jóvenes.</p>
+                            <p class="card-text"><small>Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary text-center text-white mt-4  ">
+        <!-- Grid container -->
+        <div class="container p-4">
+
+
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                    distinctio earum repellat quaerat voluptatibus placeat nam,
+                    commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                    aliquam sequi voluptate quas.
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
