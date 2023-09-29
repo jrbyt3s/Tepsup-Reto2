@@ -34,6 +34,17 @@
    margin-top: 2rem;
    cursor: pointer;
    color: yellowgreen;
+   background-color: #2E2E33;
+   padding: 8px 24px;
+   border-radius: 16px;
+   border-width: 1px;
+   border-color: white;
+}
+.contact form .btn:hover {
+
+      color: white;
+      background-color: #19191D;
+  
 }
 
 .card:hover .overlay {
