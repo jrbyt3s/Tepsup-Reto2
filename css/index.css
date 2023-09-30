@@ -17,7 +17,7 @@
    padding: 1.5rem;
    font-size: 1.6rem;
    color: white;
-   background: blue;
+   background: #2E2E33;
    border-radius: .8rem;
    margin: .7rem 0;
 }
@@ -33,7 +33,19 @@
 .contact form .btn {
    margin-top: 2rem;
    cursor: pointer;
-   color: yellowgreen;
+   font-weight: 700;
+   color: #0EA5E9;
+   background-color: #2E2E33;
+   padding: 8px 24px;
+   border-radius: 16px;
+   border-width: 1px;
+   border-color: white;
+}
+.contact form .btn:hover {
+
+      color: white;
+      background-color: #19191D;
+  
 }
 
 .card:hover .overlay {
